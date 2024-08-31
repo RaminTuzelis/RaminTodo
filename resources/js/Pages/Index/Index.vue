@@ -12,6 +12,7 @@ setInterval(() => {
         <h1>Counter: {{ counter }}</h1>
     </div>
 
+
 </template>
 
 <style scoped>
