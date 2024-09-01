@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -11,11 +10,7 @@
 }
 
 body {
-    body {
-        background-color: #f7f7f7;
-        margin: 0;
-        padding: 0;
-    }
+    background-color: #f7f7f7;
 }
 
 .nav-header {
@@ -64,4 +59,114 @@ body {
     width: 90%;
     max-width: 800px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex-grow: 1;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.todo-item-complete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.complete-text {
+    text-decoration: line-through;
+}
+
+.todo-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-add {
+    background-color: #4E4B66;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-complete {
+    background-color: #96f196;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #dc4444;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: gold;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-save {
+    background-color: #4E4B66;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.btn-cancel {
+    background-color: #dc4444;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 5px;
 }

@@ -17,4 +17,9 @@ export default defineConfig({
             },
         }),
     ],
+    build: {
+        rollupOptions: {
+            external: ['@inertiajs/inertia', '@inertiajs/inertia-vue3']
+        }
+    }
 });

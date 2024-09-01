@@ -21,23 +21,32 @@ class TodoController extends Controller
         ]);
 
         Todo::create($request->only('title'));
-        return redirect()->back();
+
+        return Inertia::render('Todos/Index', [
+            'todos' => Todo::all(),
+        ]);
     }
 
     public function update(Request $request, Todo $todo) {
         $request->validate([
-           'title' => 'required|string|max:255',
-           'completed' => 'boolean',
+            'title' => 'required|string|max:255',
+            'completed' => 'boolean',
         ]);
 
         $todo->update($request->only('title', 'completed'));
-        return redirect()->route('todos.index');
+
+        return Inertia::render('Todos/Index', [
+            'todos' => Todo::all(),
+        ]);
     }
 
-    public function destroy(Todo $todo) {
+    public function destroy(Todo $todo)
+    {
         $todo->delete();
-        return redirect()->route('todos.index');
-    }
 
+        return Inertia::render('Todos/Index', [
+            'todos' => Todo::all(),
+        ]);
+    }
 
 }
